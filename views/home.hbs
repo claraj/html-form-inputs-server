@@ -1,0 +1,32 @@
+<h1>Example Page that Submits a Form to a Server</h1>
+
+<h2>Order Form</h2>
+
+<form method="POST" action="/place-order">
+
+    <div>
+        <label for="name">Customer Name</label>
+        <input id="name" name="name" required>
+    </div>
+
+    <div>
+        <label>Product</label><select name="product" required>
+            <option>Hat</option>
+            <option>Mittens</option>
+            <option>Scarf</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" required>
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+    
+</form>
+
+
+<a href="/order-list">View order list</a>

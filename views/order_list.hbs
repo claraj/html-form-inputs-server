@@ -1,0 +1,17 @@
+<h1>Orders</h1>
+
+{{# each orders}}
+
+    <div>
+        <h3>Customer Name: {{this.name}}</h3>
+        <p>Product: {{this.product}}</p>
+        <p>Quantity: {{this.quantity}}
+    </div>
+
+{{else}}
+
+    <p>No data.</p>
+
+{{/each}}
+
+<a href="/">Back to order input form</a>

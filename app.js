@@ -4,18 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/order_routes');
 
 var sqlite3 = require('sqlite3').verbose()
 
 var db = new sqlite3.Database('db.sqlite')
 
-// db.serialize(function() {
-  db.run('CREATE TABLE family (name TEXT, age NUMBER, role TEXT)', function(err) {
+db.serialize(function() {
+  db.run('CREATE TABLE IF NOT EXISTS orders (name TEXT, product TEXT, quantity NUMBER)', function(err) {
     console.log(err || 'table created')
   })
-// })
+})
 
 db.close()
 
@@ -32,7 +31,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
