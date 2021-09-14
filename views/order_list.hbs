@@ -1,17 +1,20 @@
-<h1>Orders</h1>
+<h2>All Orders</h2>
 
 {{# each orders}}
 
     <div>
-        <h3>Customer Name: {{this.name}}</h3>
+        <h3>Order ID: {{this.id}}</h3>
+        <p>Customer Name: {{this.name}}</p>
         <p>Product: {{this.product}}</p>
-        <p>Quantity: {{this.quantity}}
+        <p>Quantity: {{this.quantity}}</p>
+
+        <a href="edit/{{this.id}}">Edit this order</a>
+        
+        <hr>
     </div>
 
 {{else}}
 
-    <p>No data.</p>
+    <p>No orders.</p>
 
 {{/each}}
-
-<a href="/">Back to order input form</a>

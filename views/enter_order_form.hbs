@@ -1,6 +1,6 @@
-<h1>Example Page that Submits a Form to a Server</h1>
-
 <h2>Order Form</h2>
+
+<h3>Enter information for a new order</h3>
 
 <form method="POST" action="/place-order">
 
@@ -10,10 +10,11 @@
     </div>
 
     <div>
-        <label>Product</label><select name="product" required>
-            <option>Hat</option>
-            <option>Mittens</option>
-            <option>Scarf</option>
+        <label for="product">Product</label>
+        <select id="product" name="product" required>
+            <option value="Hat">Hat</option>
+            <option value="Mittens">Mittens</option>
+            <option value="Scarf">Scarf</option>
         </select>
     </div>
 
@@ -23,10 +24,7 @@
     </div>
 
     <div>
-        <input type="submit">
+        <button type="submit">Submit Order</button>
     </div>
     
 </form>
-
-
-<a href="/order-list">View order list</a>

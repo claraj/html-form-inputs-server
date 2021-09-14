@@ -1,6 +1,10 @@
 body {
-  padding: 50px;
+  padding: 40px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.nav-link {
+  padding-right: 10px;
 }
 
 a {
@@ -8,7 +12,11 @@ a {
 }
 
 input, select {
-  /* margin: 10px; */
+  margin: 10px;
+}
+
+button {
+  margin-top: 10px;
 }
 
 label {
