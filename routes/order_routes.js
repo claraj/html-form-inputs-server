@@ -1,6 +1,5 @@
 let createError = require('http-errors');
 let express = require('express');
-const { render } = require('../app');
 let sqlite3 = require('sqlite3').verbose()
 let router = express.Router();
 

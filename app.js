@@ -14,7 +14,7 @@ let db = new sqlite3.Database('db.sqlite')
 
 db.serialize(function() {
   db.run('CREATE TABLE IF NOT EXISTS orders (id integer primary key autoincrement, name TEXT, product TEXT, quantity NUMBER)', function(err) {
-    console.log(err || 'table created')
+    console.log(err || 'Order table exists or was created')
   })
 })
 
